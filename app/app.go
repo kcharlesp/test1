@@ -48,6 +48,7 @@ import (
 	"github.com/classic-terra/core/v2/app/upgrades"
 	v2 "github.com/classic-terra/core/v2/app/upgrades/v2"
 	v3 "github.com/classic-terra/core/v2/app/upgrades/v3"
+	v4 "github.com/classic-terra/core/v2/app/upgrades/v4"
 
 	customante "github.com/classic-terra/core/v2/custom/auth/ante"
 	customauthrest "github.com/classic-terra/core/v2/custom/auth/client/rest"
@@ -67,7 +68,7 @@ var (
 	DefaultNodeHome string
 
 	// Upgrades defines upgrades to be applied to the network
-	Upgrades = []upgrades.Upgrade{v2.Upgrade, v3.Upgrade}
+	Upgrades = []upgrades.Upgrade{v2.Upgrade, v3.Upgrade, v4.Upgrade}
 )
 
 // Verify app interface at compile time
