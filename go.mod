@@ -4,7 +4,8 @@ module github.com/classic-terra/core/v2
 
 require (
 	github.com/CosmWasm/wasmvm v0.16.7
-	github.com/cosmos/cosmos-sdk v0.45.13
+	github.com/classic-terra/core v1.2.0
+	github.com/cosmos/cosmos-sdk v0.45.14
 	github.com/cosmos/gogoproto v1.4.4
 	github.com/cosmos/ibc-go/v4 v4.3.0
 	github.com/gogo/protobuf v1.3.3
@@ -129,7 +130,7 @@ replace (
 	github.com/CosmWasm/wasmvm => github.com/classic-terra/wasmvm v0.16.8-beta5
 	github.com/aws/aws-sdk-go v1.25.48 => github.com/aws/aws-sdk-go v1.33.0
 	github.com/aws/aws-sdk-go v1.27.0 => github.com/aws/aws-sdk-go v1.33.0
-	github.com/cosmos/cosmos-sdk => github.com/classic-terra/cosmos-sdk v0.45.13-classic
+	github.com/cosmos/cosmos-sdk => github.com/classic-terra/cosmos-sdk v0.45.14-classic
 	github.com/cosmos/ledger-cosmos-go => github.com/terra-money/ledger-terra-go v0.11.2
 	github.com/docker/docker v1.4.2-0.20180625184442-8e610b2b55bf => github.com/docker/docker v1.6.1
 	github.com/ethereum/go-ethereum v1.9.25 => github.com/ethereum/go-ethereum v1.10.9
