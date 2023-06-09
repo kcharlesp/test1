@@ -18,8 +18,8 @@ import (
 	tmos "github.com/tendermint/tendermint/libs/os"
 	dbm "github.com/tendermint/tm-db"
 
-	ibctransfertypes "github.com/cosmos/ibc-go/modules/apps/transfer/types"
-	ibcchanneltypes "github.com/cosmos/ibc-go/modules/core/04-channel/types"
+	ibctransfertypes "github.com/cosmos/ibc-go/v4/modules/apps/transfer/types"
+	ibcchanneltypes "github.com/cosmos/ibc-go/v4/modules/core/04-channel/types"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/client"
@@ -200,7 +200,7 @@ func NewTerraApp(
 			TreasuryKeeper:     app.TreasuryKeeper,
 			SigGasConsumer:     ante.DefaultSigVerificationGasConsumer,
 			SignModeHandler:    encodingConfig.TxConfig.SignModeHandler(),
-			IBCChannelKeeper:   app.IBCKeeper.ChannelKeeper,
+			IBCChannelKeeper:   *app.IBCKeeper,
 			DistributionKeeper: app.DistrKeeper,
 			GovKeeper:          app.GovKeeper,
 		},

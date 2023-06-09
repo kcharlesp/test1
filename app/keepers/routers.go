@@ -1,11 +1,11 @@
 package keepers
 
 import (
-	"github.com/cosmos/ibc-go/modules/apps/transfer"
-	ibctransfertypes "github.com/cosmos/ibc-go/modules/apps/transfer/types"
-	ibcclient "github.com/cosmos/ibc-go/modules/core/02-client"
-	ibcclienttypes "github.com/cosmos/ibc-go/modules/core/02-client/types"
-	porttypes "github.com/cosmos/ibc-go/modules/core/05-port/types"
+	"github.com/cosmos/ibc-go/v4/modules/apps/transfer"
+	ibctransfertypes "github.com/cosmos/ibc-go/v4/modules/apps/transfer/types"
+	ibcclient "github.com/cosmos/ibc-go/v4/modules/core/02-client"
+	ibcclienttypes "github.com/cosmos/ibc-go/v4/modules/core/02-client/types"
+	porttypes "github.com/cosmos/ibc-go/v4/modules/core/05-port/types"
 
 	"github.com/classic-terra/core/v2/x/treasury"
 	treasurytypes "github.com/classic-terra/core/v2/x/treasury/types"
@@ -32,7 +32,7 @@ func (appKeepers *AppKeepers) getGovRouter() govtypes.Router {
 }
 
 func (appKeepers *AppKeepers) setIBCRouter() {
-	transferModule := transfer.NewAppModule(appKeepers.TransferKeeper)
+	transferModule := transfer.NewIBCModule(appKeepers.TransferKeeper)
 
 	ibcRouter := porttypes.NewRouter()
 	ibcRouter.AddRoute(ibctransfertypes.ModuleName, transferModule)
